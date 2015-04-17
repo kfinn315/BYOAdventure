@@ -1,0 +1,16 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" tools:context=".MainActivity">
+    <item android:id="@+id/action_new" android:title="New"
+        app:showAsAction="ifRoom"/>
+    <item android:id="@+id/action_progress" android:title="Input" app:showAsAction="always"/>
+    <item android:id="@+id/action_settings" android:title="@string/action_settings"
+        android:orderInCategory="100" app:showAsAction="never" />
+    <item android:id="@+id/action_pedometer" android:title="@string/action_pedometer"
+        android:orderInCategory="100" app:showAsAction="never" />
+    <item android:id="@+id/action_resethealth" app:showAsAction="never" android:title="@string/action_resethealth"/>
+    <item android:id="@+id/action_resetlives" app:showAsAction="never" android:title="@string/action_resetlives"/>
+    <item android:id="@+id/action_requestevent" app:showAsAction="never" android:title="Request Event"/>
+    <item android:id="@+id/action_advanceDay" app:showAsAction="never" android:title="Advance a day"/>
+    <item android:id="@+id/action_getResult" app:showAsAction="never" android:title="Get Result of Day"/>
+</menu>

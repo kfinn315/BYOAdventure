@@ -1,0 +1,259 @@
+<com.bingcrowsby.byoadventure.View.CustomSlidingPaneLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+        <!-- The navigation drawer -->
+        <TableLayout
+            android:stretchColumns="1"
+            android:clickable="true"
+            android:layout_gravity="left"
+            android:id="@+id/left_drawer"
+            android:layout_height="match_parent"
+            android:layout_width="200dp"
+            android:background="#000000">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Start"
+                    android:id="@+id/textView2" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/editTextStart" />
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="End"
+                    android:id="@+id/textViewEnd" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/editTextEnd" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Duration"
+                    android:id="@+id/textView" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/editTextDuration" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Distance"
+                    android:id="@+id/textViewDist" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/editTextDistance" />
+            </TableRow>
+        </TableLayout>
+
+    <!-- The main content view -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="right|bottom">
+
+            <FrameLayout
+                android:id="@+id/frame"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="false"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_above="@+id/footer"
+                android:background="#ffffff" />
+
+            <LinearLayout
+                android:id="@+id/header"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:layout_alignParentBottom="false"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:background="#ffe10000"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="5dp"
+                android:layout_alignParentTop="true">
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/editTextTitle"
+                    android:layout_weight="1"
+                    android:hint="Title" />
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:hint="Time Length"
+                    android:id="@+id/editTextDays"
+                    android:layout_weight=".75"
+                    android:inputType="number" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="\??? miles/ ??? miles"
+                    android:id="@+id/textViewDistance"
+                    android:textColor="#ffffff"
+                    android:layout_alignLeft="@+id/textViewDistance"
+                    android:layout_alignBottom="@+id/textViewTitle"
+                    android:layout_alignTop="@+id/textViewTitle"
+                    android:layout_weight=".5"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:gravity="center" />
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/imgButtonIcon"
+                    android:src="@drawable/running_icon"
+                    android:scaleType="fitCenter" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/footer"
+                android:layout_width="fill_parent"
+                android:layout_height="20dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:background="#ffe10000"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="5dp">
+
+            </LinearLayout>
+
+        <!--</RelativeLayout>-->
+            <!--<LinearLayout-->
+                <!--android:id="@+id/footer"-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_alignParentBottom="true"-->
+                <!--android:layout_alignParentLeft="true"-->
+                <!--android:layout_alignParentRight="true"-->
+                <!--android:background="@color/red"-->
+                <!--android:orientation="vertical"-->
+                <!--android:gravity="center_vertical"-->
+                <!--android:padding="5dp"-->
+                <!--android:alpha=".7">-->
+
+                <!--<LinearLayout-->
+                    <!--android:orientation="horizontal"-->
+                    <!--android:layout_width="fill_parent"-->
+                    <!--android:layout_height="wrap_content">-->
+
+                    <!--<TextView-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:text="Title"-->
+                        <!--android:id="@+id/textViewName2"-->
+                        <!--android:textColor="#000000" />-->
+
+                    <!--<EditText-->
+                        <!--android:layout_width="0dp"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:id="@+id/editTextTitle"-->
+                        <!--android:layout_weight="1" />-->
+
+                    <!--<TextView-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:text="Days"-->
+                        <!--android:id="@+id/textViewTime"-->
+                        <!--android:textColor="#000000"-->
+                        <!--android:layout_alignLeft="@+id/textViewDistance"-->
+                        <!--android:layout_alignBottom="@+id/editTextProgress"-->
+                        <!--android:layout_alignTop="@+id/editTextProgress"-->
+                        <!--android:gravity="center_vertical" />-->
+
+                    <!--<EditText-->
+                        <!--android:layout_width="0dp"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:id="@+id/editTextProgress"-->
+                        <!--android:layout_toRightOf="@+id/textViewTime"-->
+                        <!--android:layout_below="@+id/textViewDistance"-->
+                        <!--android:layout_weight=".25"-->
+                        <!--android:inputType="number" />-->
+
+                <!--</LinearLayout>-->
+
+                <!--<LinearLayout-->
+                    <!--android:orientation="horizontal"-->
+                    <!--android:layout_width="fill_parent"-->
+                    <!--android:layout_height="fill_parent">-->
+
+                    <!--<TextView-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="fill_parent"-->
+                        <!--android:text="Map Scale"-->
+                        <!--android:textColor="#000000"-->
+                        <!--android:layout_alignBottom="@+id/seekBarScale"-->
+                        <!--android:layout_alignTop="@+id/seekBarScale"-->
+                        <!--android:gravity="center_vertical" />-->
+
+                    <!--<SeekBar-->
+                        <!--android:layout_width="0dp"-->
+                        <!--android:layout_height="fill_parent"-->
+                        <!--android:layout_toRightOf="@+id/textViewScale"-->
+                        <!--android:layout_below="@+id/textViewTime"-->
+                        <!--android:layout_weight="1"-->
+                        <!--android:id="@+id/seekBarScale"-->
+                        <!--android:splitTrack="false"-->
+                        <!--android:layout_gravity="center_vertical"-->
+                        <!--android:max="101"-->
+                        <!--android:progress="0" />-->
+
+                    <!--<TextView-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="fill_parent"-->
+                        <!--android:text="scale"-->
+                        <!--android:id="@+id/textViewScale"-->
+                        <!--android:textColor="#000000"-->
+                        <!--android:gravity="center_vertical" />-->
+                <!--</LinearLayout>-->
+
+            <!--</LinearLayout>-->
+        </RelativeLayout>
+    </RelativeLayout>
+</com.bingcrowsby.byoadventure.View.CustomSlidingPaneLayout>
